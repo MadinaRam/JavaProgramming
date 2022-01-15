@@ -10,7 +10,7 @@ public class CharacterIdentity {
         }else if( (ch >= 65 && ch <= 90)  || (ch >= 97 && ch <= 122)  ) {
             System.out.println("Alphabetic");
         }else {
-            System.out.println("Special character1");
+            System.out.println("Special character");
         }
 
 
