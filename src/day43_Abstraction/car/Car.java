@@ -55,4 +55,15 @@ public abstract class Car {
     }
 
     public abstract void start();
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", year=" + year +
+                ", price=$" + price +
+                '}';
+    }
 }
