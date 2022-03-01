@@ -37,10 +37,47 @@ public class SetPractice2 {
 
         System.out.println("---------------------------------------------");
 
-        String str = "aaaabbbbccccddddeeee";
+        /*
+        Given:
+            Integer[] nums = {1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10};
+            return the fifth element after removing the duplicates
+                        Do not change the order of the elements
+         */
 
-        String result = ""; //a4b4c4d4e4
+        Integer[] nums = {1,2,3,4,5,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10};
 
+        nums = new LinkedHashSet<>(Arrays.asList(nums)).toArray(new Integer[0]);
+
+        System.out.println(Arrays.toString(nums));
+
+        System.out.println("-----------------------------------------------");
+
+        String str = "eeeeeaaaabbbbccccdddeeeee";
+
+        //  eabcd
+        //  54434
+
+        String result = ""; //e5a4b4c4d3
+
+        for (String each : new LinkedHashSet<>(Arrays.asList(str.split("")))) {
+            result += each + Collections.frequency(  Arrays.asList(str.split("")) ,  each);
+        }
+
+        System.out.println(result);
+
+        System.out.println("-----------------------------------------------");
+
+        Set<String> names = new LinkedHashSet<>();
+        names.addAll(Arrays.asList("Ahmet", "Ahmet", "John", "James", "Breanna", "Shay", "Ahmet"));
+
+        System.out.println( names.toArray(new String[0])[2] );
+
+        System.out.println( new ArrayList<>(names).get(4)  );
+
+
+        for(String each : names ){
+            System.out.println(each);
+        }
 
 
 
